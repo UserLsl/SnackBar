@@ -1,19 +1,15 @@
-<?php
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnackBar</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
 
-class LoginView {
-
-    private $erro;
-
-    public function mostrarHome() {
-        header("Location: home.php");
-    }
-    public function mostrarErro($resultado) {
-        $this->erro = $resultado;
-        $this->mostrarFormulario();
-    }
-    public function mostrarFormulario() {
-        echo '
-        <section class="vh-100">
+    <section class="vh-100">
         <div class="container-fluid">
             <div class="row">
             <div class="col-sm-6 text-black">
@@ -29,7 +25,7 @@ class LoginView {
     
                 <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-5 mt-5 pt-2 mt-xl-n5">
     
-                <form action="#" method="post" style="width: 23rem;">
+                <form action="login" method="post" style="width: 23rem;">
     
                     <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Entrar</h3>
     
@@ -61,6 +57,7 @@ class LoginView {
             </div>
         </div>
         </section>
-        ';
-    }
-}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

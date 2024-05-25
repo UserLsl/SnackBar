@@ -1,7 +1,7 @@
 <?php
 
 // declara o BD
-$dsn = "mysql:dbname=snackbar";
+$dsn = "mysql:host=localhost:3306;dbname=snackbar";
 
 // declara o user do BD
 $dbuser = "root";

@@ -1,29 +1,23 @@
 <?php
 
-//Chama o model e view
-require_once 'dao/LoginDAO.php';
-require_once 'model/LoginModel.php';
-require_once 'view/LoginView.php';
-
-//Classe da model e view
 class LoginController {
-    private $model;
-    private $view;
-    private $dao;
 
-    public function __construct($model, $view, $dao) {
-        $this->model = $model;
-        $this->view = $view;
-        $this->dao = $dao;
+    public static function index() {
+        include 'view/modules/Login/LoginForm.php';
     }
 
-    public function logar($email, $senha) {
-        $sql = $this->dao->consultarUsuario($email);
-        $resultado = $this->model->verificarSenha($sql, $senha);
+    public static function logar() {
+
+        include 'model/UsuarioModel.php';
+
+        $model = new UsuarioModel($_POST['email'], $_POST['senha']);
+        $resultado = $model->verificarSenha();
+
+        // $view = new LoginView();
         if ($resultado === true) {
-            $this->view->mostrarHome();
+            header("Location: /snackbar/home");
         } else {
-            $this->view->mostrarErro($resultado);
+            header("Location: /snackbar/index");
         }
     }
 }
