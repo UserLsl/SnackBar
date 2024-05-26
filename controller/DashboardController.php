@@ -1,12 +1,19 @@
 <?php
 
-class DashboardController {
+include 'Controller.php';
+
+class DashboardController extends Controller {
 
     public static function dashboard() {
+
+        parent::isProtected();
+
         include 'view/modules/Dashboard/Dashboard.php';
     }
 
     public static function deslogar() {
+
+        parent::isProtected();
 
         include 'model/UsuarioModel.php';
 

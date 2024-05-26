@@ -1,11 +1,11 @@
 <?php
-// require 'config.php';
 
 class UsuarioDAO {
     private $db;
 
     public function __construct() {
-        include 'ConfigBD.php';
+        include 'dao/Database.php';
+        $pdo = new MySQL();
         $this->db = $pdo;
     }
 

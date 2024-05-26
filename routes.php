@@ -13,11 +13,7 @@
                 LoginController::logar();
                 break;
             case '/snackbar/dashboard':
-                if (!isset($_SESSION['id'])) {
-                    header("Location: /snackbar/index");
-                } else {
-                    DashboardController::dashboard();
-                }
+                DashboardController::dashboard();
                 break;
             case '/snackbar/logout':
                 DashboardController::deslogar();

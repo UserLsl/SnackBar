@@ -3,6 +3,7 @@
 class LoginController {
 
     public static function index() {
+
         include 'view/modules/Login/LoginForm.php';
     }
 

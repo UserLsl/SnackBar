@@ -1,9 +1,8 @@
 <?php
-session_start();
 
 class UsuarioModel {
 
-    private $id, $nome, $email;
+    private $id, $nome, $senha, $email;
     private $logado;
 
     public function __construct($email, $senha) {
