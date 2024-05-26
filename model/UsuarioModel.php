@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 class UsuarioModel {
 
@@ -26,11 +27,13 @@ class UsuarioModel {
                     $_SESSION['email'] = $user['email'];
                     $this->logado = true;
                 } else {
-                    $this->logado = 'E-mail ou senha incorretos!';
+                    $_SESSION['erro'] = 'E-mail ou senha incorretos!';
+                    $this->logado = false;
                 }
             }
         } else {
-            $this->logado = 'Nenhuma conta encontrada para este e-mail!';
+            $_SESSION['erro'] = 'Nenhuma conta encontrada para este e-mail!';
+            $this->logado = false;
         }
 
         return $this->logado;

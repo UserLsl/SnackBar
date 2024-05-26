@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SnackBar</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
@@ -19,11 +19,11 @@
                 <span class="h1 fw-bold mb-0">
                     <!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSajoJiooeAQfGpjvbiickOIbzmwkXWcyMErdTlJCQG8A&s"
                     alt="Login image"> -->
-                    <h1 id="titulo">Snackbar</h1>
+                    <h1 id="loginTitulo">Snackbar</h1>
                 </span>
                 </div>
     
-                <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-5 mt-5 pt-2 mt-xl-n5">
+                <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-5 mt-4 pt-2 mt-xl-n5">
     
                 <form action="login" method="post" style="width: 23rem;">
     
@@ -37,9 +37,17 @@
                     <div data-mdb-input-init class="form-outline mb-4">
                     <label class="form-label" for="form2Example28">Senha</label>
                     <input name="senha" type="password" id="form2Example28" class="form-control form-control-lg" required />
-                    </div>'
-                    .$this->erro.
-                    '<div class="pt-1 mb-4">
+                    </div>
+                    <div>
+                        <p id="LoginErro">
+                        <?php 
+                            if (isset($_SESSION['erro'])) {
+                                echo $_SESSION['erro'];
+                            }
+                        ?>
+                        </p>
+                    </div>
+                    <div class="pt-1 mb-4">
                     <button data-mdb-button-init data-mdb-ripple-init class="btn btn-danger btn-lg btn-block" type="submit">Login</button>
                     </div>
     

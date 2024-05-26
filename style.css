@@ -1,6 +1,11 @@
-#titulo {
+#loginTitulo {
 	position: relative;
-	font-size: 4rem;
+	font-size: 3rem;
 	font-family: system-ui, sans-serif;
-	margin-left: 2rem;
+	margin-left: 4%;
+}
+
+#LoginErro {
+	font-size: 15px;
+	color: red;
 }

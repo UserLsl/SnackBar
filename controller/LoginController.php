@@ -10,12 +10,11 @@ class LoginController {
 
         include 'model/UsuarioModel.php';
 
-        $model = new UsuarioModel($_POST['email'], $_POST['senha']);
-        $resultado = $model->verificarSenha();
+        $usuario = new UsuarioModel($_POST['email'], $_POST['senha']);
+        $logado = $usuario->verificarSenha();
 
-        // $view = new LoginView();
-        if ($resultado === true) {
-            header("Location: /snackbar/home");
+        if ($logado) {
+            header("Location: /snackbar/dashboard");
         } else {
             header("Location: /snackbar/index");
         }
