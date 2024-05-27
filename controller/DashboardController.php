@@ -1,7 +1,5 @@
 <?php
 
-include 'Controller.php';
-
 class DashboardController extends Controller {
 
     public static function dashboard() {

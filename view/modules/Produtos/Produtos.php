@@ -13,7 +13,7 @@
                 <?php include 'view/includes/sidebar.php' ?>
             </div>
             <div class="col-sm-9 col-md-10">
-                <?php include 'DashboardContent.php' ?>
+                <?php include 'ProdutosContent.php' ?>
             </div>
         </div>
     </main>

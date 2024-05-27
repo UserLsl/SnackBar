@@ -7,13 +7,13 @@
     <hr>
     <ul class="nav nav-pills flex-column mb-auto">
         <li class="nav-item">
-            <a href="#" class="nav-link text-white active" aria-current="page">
+            <a id="DashboardLink" href="dashboard" class="nav-link text-white" aria-current="page">
                 <i id="DashboardIcon" class="fa-solid fa-house"></i>
                 <span id="DashboardItem">Dashboard</span>
             </a>
         </li>
         <li>
-            <a href="#" class="nav-link text-white">
+            <a id="DashboardLink" href="produtos" class="nav-link text-white">
                 <i id="DashboardIcon" class="fa-solid fa-utensils"></i>
                 <span id="DashboardItem">Produtos</span>
             </a>
