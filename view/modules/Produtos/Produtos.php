@@ -13,7 +13,16 @@
                 <?php include 'view/includes/sidebar.php' ?>
             </div>
             <div class="col-sm-9 col-md-10">
-                <?php include 'ProdutosContent.php' ?>
+                <section>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-12 text-black">
+                                <?php include 'ProdutosInsert.php' ?>
+                                <?php include 'ProdutosSelect.php' ?>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
         </div>
     </main>

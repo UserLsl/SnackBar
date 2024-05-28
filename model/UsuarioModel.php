@@ -16,14 +16,14 @@ class UsuarioModel {
 
         $dao = new UsuarioDAO();
 
-        $sql = $dao->consultarUsuario($this->email);
+        $sql = $dao->selecionarUsuario($this->email);
 
         if ($sql->rowCount() > 0) {
             foreach ($sql->fetchall() as $user) {
-                if ($user['senha'] == $this->senha) {
-                    $_SESSION['nome'] = $user['nome'];
-                    $_SESSION['id'] = $user['id'];
-                    $_SESSION['email'] = $user['email'];
+                if ($user['userPassword'] == $this->senha) {
+                    $_SESSION['id'] = $user['userId'];
+                    $_SESSION['nome'] = $user['userName'];
+                    $_SESSION['email'] = $user['userEmail'];
                     $this->logado = true;
                 } else {
                     $_SESSION['erro'] = 'E-mail ou senha incorretos!';
