@@ -22,7 +22,7 @@
     <hr>
     <div class="dropdown">
         <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-            <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
+            <img src="https://avatars.githubusercontent.com/u/24421055?s=400&v=4" alt="" width="32" height="32" class="rounded-circle me-2">
             <strong>
                 <?php
                 if (isset($_SESSION['nome'])) {

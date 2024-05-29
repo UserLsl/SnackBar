@@ -23,6 +23,15 @@
             case '/snackbar/produtos':
                 ProdutoController::produtos();
                 break;
+            case '/snackbar/produtos/inserir':
+                ProdutoController::inserirProduto();
+                break;
+            case '/snackbar/produtos/editar':
+                ProdutoController::editarProduto();
+                break;
+            case '/snackbar/produtos/excluir':
+                ProdutoController::excluirProduto();
+                break;
             default:
                 echo 'Erro 404';
                 break;

@@ -32,10 +32,7 @@ create table Products(
     FOREIGN KEY (categoryId) REFERENCES Categories(categoryId)
 );
 
-insert Products values (null, 1, "Blend Bacon Crispy", "Pão, molho especial, hamburguer 180g, queijo prato, tomate, alface, cream cheese, cebola e bacon.", 36.24, "A", "");
-insert Products values (null, 1, "Picanha Salada", "Pão, molho especial, hamburguer 150g, queijo prato, tomate e alface", 29.99, "A", "");
-insert Products values (null, 1, "Chesse Burguer", "Pão, molho especial, hamburguer 150g, queijo prato, cream cheese, cebola e bacon.", 26.50, "A", "");
-insert Products values (null, 2, "Batata Frita", "Deliciosa e crocantes.", 24.99, "A", "");
-insert Products values (null, 2, "Frango", "Suculentos e picantes", 23.00, "A", "");
-insert Products values (null, 3, "Refrigerante", "Açucarado", 10.00, "A", "");
-insert Products values (null, 4, "Sorvete", "Refrescante", 12.00, "A", "");
+insert Products values (null, 1, "Blend Bacon Crispy", "Pão, molho especial, hamburguer 180g, queijo prato, tomate, alface, cream cheese, cebola e bacon.", 36.24, "A", "../../img/1.png");
+insert Products values (null, 1, "Picanha Salada", "Pão, molho especial, hamburguer 150g, queijo prato, tomate e alface", 29.99, "A", "../../img/2.png");
+insert Products values (null, 2, "Batata Frita", "Deliciosa e crocantes.", 24.99, "A", "../../img/4.png");
+insert Products values (null, 2, "Frango", "Suculentos e picantes", 23.00, "A", "../../img/5.png");

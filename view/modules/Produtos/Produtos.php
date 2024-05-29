@@ -17,7 +17,13 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-sm-12 text-black">
-                                <?php include 'ProdutosInsert.php' ?>
+                                <?php 
+                                if (empty($produto)) {
+                                    include 'ProdutosInsert.php';
+                                } else {
+                                    include 'ProdutosUpdate.php';
+                                }
+                                ?>
                                 <?php include 'ProdutosSelect.php' ?>
                             </div>
                         </div>

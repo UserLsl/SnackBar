@@ -2,7 +2,7 @@
 
 class ProdutoModel {
 
-    private $nome, $desc, $valor, $status, $img, $categoria;
+    private $id, $nome, $desc, $valor, $status, $img, $categoria;
 
     public function __construct($nome, $desc, $valor, $categoria, $status, $img) {
         $this->nome = $nome;
@@ -17,6 +17,30 @@ class ProdutoModel {
         include_once 'dao/ProdutoDAO.php';
         $dao = new ProdutoDAO();
         $dao->inserirProduto($this->categoria, $this->nome, $this->desc, $this->valor, $this->status, $this->img);
+    }
+
+    public function atualizarProduto($id) {
+        include_once 'dao/ProdutoDAO.php';
+        $dao = new ProdutoDAO();
+        $dao->atualizarProduto($id, $this->categoria, $this->nome, $this->desc, $this->valor, $this->status, $this->img);
+    }
+
+    public static function excluirProduto($id) {
+        include_once 'dao/ProdutoDAO.php';
+        $dao = new ProdutoDAO();
+        $dao->deletarProduto($id);
+    }
+
+    public static function selecionarProduto($id) {
+        include_once 'dao/ProdutoDAO.php';
+        $dao = new ProdutoDAO();
+        $sql = $dao->selecionarProduto($id);
+        
+        if ($sql->rowCount() > 0) {
+            return $sql->fetchall()[0];
+        } else {
+            return 'Nenhum registro encontrado!';
+        }
     }
 
     public static function consultarTodos() {
