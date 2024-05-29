@@ -55,4 +55,12 @@ class ProdutoModel {
             return 'Nenhum registro encontrado!';
         }
     }
+
+    public static function verificarPedido($id) {
+        include_once 'dao/ProdutoDAO.php';
+        $dao = new ProdutoDAO();
+        $sql = $dao->verificarPedido($id);
+
+        return $sql;
+    }
 }

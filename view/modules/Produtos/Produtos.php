@@ -6,7 +6,7 @@
     <script src="../../../sidebar.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body style="background-color:rgb(242, 242, 242)">
     <main>
         <div class="row" style="height: 100vh; max-width: 100%;">
             <div class="col-sm-3 col-md-2">
@@ -17,13 +17,21 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-sm-12 text-black">
-                                <?php 
+                                <?php
                                 if (empty($produto)) {
                                     include 'ProdutosInsert.php';
                                 } else {
                                     include 'ProdutosUpdate.php';
                                 }
                                 ?>
+                                <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-5 mt-3 pt-2 mt-xl-n5" style="color: red;">
+                                <?php
+                                if (isset($_SESSION['erro'])) {
+                                    echo $_SESSION['erro'];
+                                    unset( $_SESSION['erro'] );
+                                }
+                                ?>
+                                </div>
                                 <?php include 'ProdutosSelect.php' ?>
                             </div>
                         </div>

@@ -6,7 +6,7 @@
     <script src="../../../sidebar.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body style="background-color:rgb(242, 242, 242)">
     <main>
         <div class="row" style="height: 100vh; max-width: 100%;">
             <div class="col-sm-3 col-md-2">

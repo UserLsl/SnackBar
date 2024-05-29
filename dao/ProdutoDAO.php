@@ -41,4 +41,9 @@ class ProdutoDAO {
         $this->db->query("DELETE FROM Products WHERE productId = ".$id.";");
     }
 
+    public function verificarPedido($id) {
+        $sql = $this->db->query("select * from Orders inner join OrdersItems on OrdersItems.orderId = Orders.orderId where OrdersItems.productId =".$id);
+        return $sql;
+    }
+
 }

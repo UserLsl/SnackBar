@@ -87,8 +87,16 @@ class ProdutoController extends Controller
         parent::isProtected();
 
         if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+
             include 'model/ProdutoModel.php';
-            ProdutoModel::excluirProduto($_GET['id']);
+            $sql =ProdutoModel::verificarPedido($_GET['id']);
+
+            if ($sql->rowCount() > 0) {
+                $_SESSION['erro'] = 'Produto já se encontra em pedido, não pode ser deletado!';
+            } else {
+                ProdutoModel::excluirProduto($_GET['id']);
+            }
+            
         }
         header("Location: /snackbar/produtos");
     }

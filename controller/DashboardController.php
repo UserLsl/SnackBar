@@ -6,6 +6,12 @@ class DashboardController extends Controller {
 
         parent::isProtected();
 
+        include_once 'model/PedidoModel.php';
+        $pedidos = PedidoModel::consultarTodos();
+        $grafico1 = PedidoModel::consultarG1();
+        $grafico2 = PedidoModel::consultarG2();
+        $grafico3 = PedidoModel::consultarG3();
+
         include 'view/modules/Dashboard/Dashboard.php';
     }
 

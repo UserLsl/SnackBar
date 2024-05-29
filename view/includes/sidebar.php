@@ -1,4 +1,4 @@
-<div id="DashboardSidebar" class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark">
+<div id="DashboardSidebar" class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark col-sm-3 col-md-2">
     <div id="DashboardTituloContainer" class="container">
         <a href="/" class="mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
             <p id="DashboardTitulo" class="fs-4">Snackbar</p>
