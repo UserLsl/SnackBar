@@ -24,15 +24,15 @@
                     <div class="container">
                         <div class="row" style="background-color:white; border: 10px white; border-radius: 10px;">
                             <div class="col-lg-4">
-                                Gráfico principal
+                                Gráfico de Vendas
                                 <div id="tester"></div>
                             </div>
                             <div class="col-lg-4">
-                                Gráfico Secundário 1
+                                Gráfico de Pedidos
                                 <div id="myDiv"></div>
                             </div>
                             <div class="col-lg-4">
-                                Gráfico Secundário 2
+                                Gráfico de Produtos Cadastrados
                                 <div id="myDiv2"></div>
                             </div>
                         </div>
